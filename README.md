@@ -1,44 +1,27 @@
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--config-env=<name>=<envvar>] <command> [<args>]
+# Телеграм-бот розкладу університету :student:
+Цей проект містить телеграм-бота, який допомагає студентам ІФНТУНГ переглядати розклад університету.
+## Інструкції зі запуску
 
-These are common Git commands used in various situations:
+1. Створіть нового бота у BotFather та отримайте API-ключ.
+2. Замініть токен `bot = Bot(token=token)` у файлі `bot.py` на свій API-ключ, який ви отримали від BotFather.
+3. Запустіть команду `pip install -r requirements.txt`, щоб встановити необхідні залежності.
+4. Запустіть бота за допомогою команди `python main.py`.
 
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
+## Доступні команди
 
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
+Бот підтримує наступні команди:
 
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
+- `/today` - відображає розклад на поточний день. :calendar:
+- `/tomorrow` - відображає розклад на наступний день. :spiral_calendar:
+- `/week` - відображає розклад на тиждень. :date:
+- `/day` - відображає Розклад за певний день. :date:
+- `/group` -  ввід групи за якою буде йти пошук. :man_student: :woman_student:
+- `/help` - Список всіх команд. :question:
+## Спілкування з автором
 
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
+Якщо виникли питання або пропозиції щодо проекту, ви можете зв'язатися з автором за допомогою електронної пошти zvarych.andrii2002@gmail.com. або [linkedin](https://www.linkedin.com/in/andrii-zvarych-812250245/).
 
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
+## Додаткові інструкції
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+- У файлі `bot.py` можна додати свої команди та їхні обробники, додаткові функції для роботи з базою даних та інше.
+- Можна створити файл `config.py` в якому зберігати конфігураційні параметри для зручності , такі як токен бота, та імпортувати їх у потрібні файли.
